@@ -60,7 +60,7 @@ jobs:
         run: dotnet pack -c Release --project yambar.Templates.csproj /p:Version=${{needs.check-if-tag.outputs.version}} /p:GenerateDocumentationFile=true  -o ${{steps.artifactsPath.outputs.nuget_artifacts}}
 
       - name: Upload Artifacts
-        uses: actions/upload-artifacts@v2
+        uses: actions/upload-artifact@v2
         with:
           name: yambar-templates
           path: ${{steps.artifactsPath.outputs.nuget_artifacts}}\*.nupkg
