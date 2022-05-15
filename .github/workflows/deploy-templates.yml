@@ -9,10 +9,11 @@ jobs:
       version: ${{steps.deployment.outputs.version}}
     steps:
       - name: Checkout
-        run:
+        run: |
           REPOSITORY="https://${{ github.actor }}:${{ github.token }}@github.com/${{ github.repository }}.git"
           BRANCH="${GITHUB_REF/#refs\/heads\//}"
 
+          git version
           git clone --no-checkout ${REPOSITORY} .
           git config --local gc.auto 0
 
