@@ -12,9 +12,10 @@ jobs:
         run:
           REPOSITORY="https://${{ github.actor }}:${{ github.token }}@github.com/${{ github.repository }}.git"
           BRANCH="${GITHUB_REF/#refs\/heads\//}"
-          git version
+
           git clone --no-checkout ${REPOSITORY} .
           git config --local gc.auto 0
+
           git -c protocol.version=2 fetch --no-tags --prune --progress --depth=2 origin +${GITHUB_SHA}:refs/remotes/origin/${BRANCH}
           git checkout --progress --force -B $BRANCH refs/remotes/origin/$BRANCH
 
