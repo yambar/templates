@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "yambar",
+  "classifications": [
+    "Console",
+    "Library"
+  ],
+  "name": "yambar templates",
+  "identity": "yambar.Templates",
+  "shortName": "yambar-templates",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "TemplateApplication",
+  "preferNameDirectory": true
+}
