@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup Label="Project">
+    <TargetFramework>{TargetFramework}</TargetFramework>
+  </PropertyGroup>
+</Project>
