@@ -1,0 +1,8 @@
+{
+  "solution": {
+    "path": "yambar-templates.sln",
+    "projects": [
+      "yambar.Templates.csproj"
+    ]
+  }
+}
