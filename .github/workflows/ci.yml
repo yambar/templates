@@ -23,7 +23,7 @@ jobs:
         run: dotnet tool restore
 
       - name: Restore .NET Packages
-        run: dotnet restore --project yambar-templates.sln
+        run: dotnet restore yambar-templates.sln
 
       - name: Restore InspectCode Cache
         uses: actions/cache@v3
