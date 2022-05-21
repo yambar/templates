@@ -1,2 +1,9 @@
 <Project>
+  <ItemGroup Label="Code Analysis">
+    <PackageReference Include="Microsoft.CodeAnalysis.BannedApiAnalyzers" Version="3.3.3" PrivateAssets="All" />
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)analysis\banned_symbols.txt" />
+  </ItemGroup>
+  <PropertyGroup Label="Code Analysis">
+    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)analysis\csharp.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
 </Project>
