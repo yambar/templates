@@ -2,13 +2,20 @@
   <PropertyGroup Label="Project">
     <PackageType>Template</PackageType>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <Title>Yambar Templates</Title>
-    <Description>Templates that can be used as starting points for new projects.</Description>
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
     <NoDefaultExcludes>true</NoDefaultExcludes>
     <NoWarn>NU5128</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Label="NuGet">
+    <Title>Yambar Templates</Title>
+    <AssemblyTitle>yambar.Templates</AssemblyTitle>
+    <AssemblyName>yambar.Templates</AssemblyName>
+    <PackageId>yambar.Templates</PackageId>
+    <PackageReleaseNotes>Automated release.</PackageReleaseNotes>
+    <PackageTags>osu framework yambar templates</PackageTags>
+    <Description>Templates that can be used as starting points for new projects.</Description>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />

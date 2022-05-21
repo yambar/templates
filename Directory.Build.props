@@ -1,0 +1,30 @@
+<Project>
+  <ItemGroup Label="Icon">
+    <None Include="$(MSBuildThisFileDirectory)assets\nupkg icon.png">
+      <Pack>True</Pack>
+      <PackagePath>icon.png</PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".github\README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+  <ItemGroup Label="Code Analysis">
+    <PackageReference Include="Microsoft.CodeAnalysis.BannedApiAnalyzers" Version="3.3.3" PrivateAssets="All" />
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)analysis\banned_symbols.txt" />
+  </ItemGroup>
+  <PropertyGroup Label="Code Analysis">
+    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)analysis\csharp.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Label="NuGet">
+    <Authors>Israel Calebe</Authors>
+    <Company>yambar</Company>
+    <Copyright>Copyright (c) 2022 yambar</Copyright>
+    <Product>yambar templates</Product>
+    <PackageReleaseNotes>Automated release.</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/yambar/templates</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/yambar/templates</RepositoryUrl>
+  </PropertyGroup>
+</Project>
